@@ -9,23 +9,23 @@ function Navbar() {
     const links = [
         {
             id: 1,
-            link : 'Home'
+            link : 'home'
         },
         {
             id: 2,
-            link : 'About Me'
+            link : 'about'
         },
         {
             id: 3,
-            link : 'Skills'
+            link : 'skills'
         },
         {
             id: 4,
-            link : 'Projects'
+            link : 'projects'
         },
         {
             id: 5,
-            link : 'Contact'
+            link : 'contact'
         },
     ]
   return (
@@ -52,7 +52,7 @@ function Navbar() {
                         <ul className='my-4'>
                             {links.map(({id, link}) => (
                                 <li key={id} className='px-4 py-2 text-medium font-bold capitalize cursor-pointer hover:scale-110 duration-200'>
-                                    <Link to={link} smooth duration={500}>{link}</Link>
+                                    <Link onClick={()=>(setBar(!bar))} to={link} smooth duration={500}>{link}</Link>
                                     
                                 </li>
                             ))}
